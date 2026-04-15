@@ -1,0 +1,18 @@
+{
+  "name": "prishi-ai",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "node scripts/run-workspaces.mjs dev",
+    "dev:backend": "npm run dev --workspace prishi-ai-backend",
+    "dev:frontend": "npm run dev --workspace prishi-ai-frontend",
+    "start": "node scripts/run-workspaces.mjs start",
+    "build": "npm run build --workspace prishi-ai-frontend",
+    "seed": "npm run seed --workspace prishi-ai-backend",
+    "install:all": "npm install --workspaces"
+  }
+}

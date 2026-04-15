@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #111111;
+  font-family: 'Sora', sans-serif;
+}
+
+:root {
+  --app-bg: #ffffff;
+  --app-fg: #111111;
+  --app-muted: rgba(17, 17, 17, 0.45);
+  --app-panel: #ffffff;
+  --app-panel-soft: #f7f7f8;
+  --app-border: rgba(17, 17, 17, 0.1);
+  --app-chip: #f3f3f3;
+}
+
+[data-theme='dark'] {
+  --app-bg: #0b0b0b;
+  --app-fg: #f5f5f5;
+  --app-muted: rgba(255, 255, 255, 0.58);
+  --app-panel: #121212;
+  --app-panel-soft: #171717;
+  --app-border: rgba(255, 255, 255, 0.1);
+  --app-chip: #232323;
+}
+
+body[data-theme='dark'] {
+  background: var(--app-bg);
+  color: var(--app-fg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.stream-cursor::after {
+  content: '';
+  display: inline-block;
+  width: 0.55rem;
+  height: 1rem;
+  margin-left: 0.25rem;
+  background: #111111;
+  animation: blink 1s step-start infinite;
+  vertical-align: middle;
+}
+
+.markdown-body p:first-child {
+  margin-top: 0;
+}
+
+.markdown-body p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body p,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body pre,
+.markdown-body blockquote {
+  margin: 0 0 0.9rem;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 1.25rem;
+}
+
+.markdown-body a {
+  color: #111111;
+}
+
+.hljs {
+  background: transparent;
+  color: #111111;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #707070;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst,
+.hljs-section,
+.hljs-name,
+.hljs-title,
+.hljs-string,
+.hljs-number,
+.hljs-literal,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-built_in,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #111111;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
